@@ -1,5 +1,4 @@
 var jsonfile = require('jsonfile')
-var y = 'yarden'
 exports.writeFile = function(location,data)
 {
     jsonfile.writeFile(location ,data, (err)=>
