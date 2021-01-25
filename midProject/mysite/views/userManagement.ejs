@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management Page</title>
+    
+   </head>
+  <body >
+    <h1>User Management Page</h1>
+    <% users.forEach(u=> { %>
+        <%if(u.User) {%> 
+        <%= u.User.user %><br>
+        <a href="/userManagement/delete/<%= u.User.user %>/<%= pwd %>">Delete User</a>
+        <% let strJson = encodeURIComponent(JSON.stringify(u.User)) %>
+        <a href="/userData/<%= user %>/<%= pwd %>/<%= strJson %>/0">Update User</a><br><br>
+    <%} }) %>
+    <a href="/userData/<%= user %>/<%= pwd %>/0/1">Add New</a>
+  </body>
+</html>

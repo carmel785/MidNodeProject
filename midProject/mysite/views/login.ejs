@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <% if(zero == "true") {%>
+
+      <h3>You have no transactions left.. please come back tommorow</h3>
+     
+    <%} else {%>
+      
+      <form action = "/newUser" method="GET">
+        User Name:<input type = "text" name = "user"><br>
+        password: <input type = "text" name = "pwd" ><br>
+        <input type = "submit" value="Submit">
+      </form>
+
+   <%}%>
+   
+  </body>
+</html>

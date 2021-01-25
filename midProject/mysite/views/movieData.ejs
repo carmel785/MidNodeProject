@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Data Page</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      </style>
+   </head>
+  <body >
+    <h1>Movie Data Page</h1>
+    <% if(movie.id) { %>
+      ID: <%= movie.id%> <br>
+    <% } %>
+    Name: <%= movie.name %><br>
+    Genres: <%= movie.genres %><br>
+    Language: <%= movie.language%><br><br>
+    <% if(movie.id < 250) { %>
+      <img src = "<%= movie.image.original %>" width= "10%"><br><br>
+    <%} %>
+    <a href="/menu/<%= user %>/<%= pwd %>">Back to Main Page</a><br>
+    <a href="/searchMovie/<%= user %>/<%= pwd %>">Back to Search Page</a><br>
+
+  </body>
+</html>

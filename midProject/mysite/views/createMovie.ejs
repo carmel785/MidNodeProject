@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Movie</title>
+</head>
+<body>
+    <h1>Create New Movie Page</h1>
+    <form action = "/createNewMovie/<%= user %>/<%= pwd %>" method="POST">
+       name:<input type = "text" name = "name" ><br>
+       Language: <input type = "text" name = "language" ><br>
+       genre: <input type = "text" name = "genres" ><br>
+        <input type = "submit" value="Submit">
+      </form>
+</body>
+</html>

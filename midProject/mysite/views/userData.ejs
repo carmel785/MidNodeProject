@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data Page</title>
+    
+   </head>
+  <body >
+    <h1>User Data Page</h1>
+
+    <% if(num == 1) {%>
+
+      <h3>Create User:</h3>
+    <form action = "/userData/create/<%= user %>/<%= pwd %>" method="GET">  
+      User Name:<input type = "text" name = "user"><br>
+      password: <input type = "text" name = "pwd" ><br>
+      created date: <input type = "text" name = "created_date" ><br>
+      Number of Transactions: <input type = "number" name = "TransactionsNum" min="1" max="5" ><br>
+
+      <input type = "submit" value="Save">
+    </form>
+
+   <%}else{%>
+    <h3>Update User:</h3>
+    <% var strJson = encodeURIComponent(JSON.stringify(updateU)); %>
+    <form action = "/userData/<%= user %>/<%= pwd %>/<%= strJson %>" method="GET" >
+    User Name:<input type = "text" name = "user" value = "<%= updateU.user%>" ><br>
+    password: <input type = "text" name = "pwd" value = "<%= updateU.pwd%>"><br>
+    created date: <input type = "text" name = "created_date" value = "<%= updateU.created_date%>"><br>
+    Number of Transactions: <input type = "number" name = "TransactionsNum" min="1" max="5" value = "<%= updateU.TransactionsNum%>"><br>
+    <input type = "submit" value="Update">
+  </form>
+    <%}%>
+
+  </body>
+</html>
